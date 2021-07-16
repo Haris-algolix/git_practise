@@ -1,0 +1,67 @@
+.back_image{
+    /* background-image: url('image/background_image.jpeg'); */
+     background: linear-gradient(rgba(255,255,255,1),
+              rgba(255,255,255,0)), url('image/background_image.jpeg');
+
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.roof_head{
+    text-align:center;
+    color: red;
+}
+.sched_head{
+    text-align:center;
+}
+.para_head{
+    text-align:center;
+    font-size:25px;
+}
+.inner-addon {
+    position: relative;
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+
+.submit_btn{
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, orange , red);
+}
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.center {
+    padding-top: 200px;
+  width: 80%;
+  align: center;
+}
+.link_call_back{
+    text-align:center;
+    font-size: 19px;
+}
+.link{
+    border-bottom: 2px dotted blue;
+
+}

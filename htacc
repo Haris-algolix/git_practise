@@ -1,0 +1,199 @@
+Options +Includes
+AddType server-parsed .shtml .html
+AddType text/html .shtml .html
+ErrorDocument 404 /content/404
+
+<ifModule mod_deflate.c>
+    <filesMatch "\.(js|css|html|php)$">
+        SetOutputFilter DEFLATE
+    </filesMatch>
+</ifModule>
+
+<IfModule mod_expires.c>
+          <FilesMatch "\.(jpe?g|png|gif|js|css)$">
+                      ExpiresActive On
+                      ExpiresDefault "access plus 3 months"
+          </FilesMatch>
+</IfModule>
+
+RewriteEngine On
+
+
+
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://poolstore.co.uk/$1 [L,R=301]
+
+
+
+AddType text/html .shtml
+AddHandler server-parsed .html
+#Options Indexes FollowSymLinks Includes
+
+RewriteRule ^category/accessories-for-small-pools /category/small-pool-accessories [R=301,L]
+RewriteRule ^product/manual-cleaning/skooba-small-pool-vacuum /product/accessories-for-small-pools/skooba-small-pool-vacuum [R=301,L]
+RewriteRule ^category/walu-safety-covers /covers/walu-pool-covers.html [R=301,L]
+RewriteRule ^winter_cover_price_calculator.html /covers/winter-pool-cover-prices.html [R=301,L]
+RewriteRule ^product/spa/5kg-chlorine-sanitiser /product/chlorines/stabilised-granular-chlorine-5kg [R=301,L]
+RewriteRule ^category/stain-removal /category/speciality [R=301,L]
+
+RewriteRule ^product/manual-cleaning/flexible-vacuum-hoses /product/manual-cleaning/swimming-pool-vacuum-hoses [R=301,L]
+RewriteRule ^product/manual-cleaning/deep-leaf-net /product/manual-cleaning/swimming-pool-deep-leaf-net [R=301,L]
+RewriteRule ^summer_cover_price_calculator.html /covers/pool-cover-prices.html [R=301,L]
+RewriteRule ^category/chemicals /category/pool-chemicals [R=301,L]
+RewriteRule ^category/heaters /category/pool-heaters [R=301,L]
+RewriteRule ^category/heat-exchangers /product/heat-exchangers/heat-exchangers [R=301,L]
+RewriteRule ^liners_colour_choices.html /liners/liner-colours.html [R=301,L]
+RewriteRule ^pool_liners.html /liners/pool-liners.html [R=301,L]
+RewriteRule ^airdome.html /enclosures/swimming-pool-enclosures.html [R=301,L]
+RewriteRule ^content/air-domes-and-enclosures /enclosures/swimming-pool-enclosures.html [R=301,L]
+#RewriteRule ^category/block-and-liner-pool-kits /pools/block-and-liner-pool-kits.html [R=301,L]
+RewriteRule ^product/diy-pool-kits/polymer-panel-pool-kits /pools/diy-pool-kits.html [R=301,L]
+
+RewriteRule ^product/accessories-for-small-pools/pump-for-intex-pools /product/small-pool-accessories/pump-for-intex-pools [R=301,L]
+RewriteRule ^product/accessories-for-small-pools/super-solar-cover-for-circular-pools /product/small-pool-accessories/super-solar-cover-for-circular-pools [R=301,L]
+RewriteRule ^product/summer-covers/super-solar-cover-for-circular-pools /product/small-pool-accessories/super-solar-cover-for-circular-pools [R=301,L]
+RewriteRule ^product/accessories-for-small-pools/standard-intex-filter-cartridge /product/filters/standard-intex-filter-cartridge [R=301,L]
+RewriteRule ^product/accessories-for-small-pools/large-intex-filter-cartridge /product/filters/large-intex-filter-cartridge [R=301,L]
+RewriteRule ^product/accessories-for-small-pools/large-pump-for-intex-pools /product/small-pool-accessories/large-pump-for-intex-pools [R=301,L]
+RewriteRule ^product/accessories-for-small-pools/small-intex-filter-(2) /product/small-pool-accessories/small-intex-filter-(2) [R=301,L]
+RewriteRule ^product/accessories-for-small-pools/intex-sand-filter-and-pump /product/filters/the-intex-sand-filter-and-pump [R=301,L]
+RewriteRule ^product/small-pool-accessories/intex-sand-filter-and-pump /product/filters/the-intex-sand-filter-and-pump [R=301,L]
+RewriteRule ^product/accessories-for-small-pools/vacuum-for-small-pools /product/small-pool-accessories/vacuum-for-small-pools [R=301,L]
+RewriteRule ^product/manual-cleaning/vacuum-for-small-pools /product/small-pool-accessories/vacuum-for-small-pools [R=301,L]
+RewriteRule ^product/accessories-for-small-pools/intex-pump-connection-hose /product/pipes-and-fittings/intex-pump-connection-hose [R=301,L]
+RewriteRule ^product/accessories-for-small-pools/intex-3kw-heater /product/small-pool-accessories/intex-3kw-heater [R=301,L]
+RewriteRule ^product/electric-heaters/intex-3kw-heater /product/small-pool-accessories/intex-3kw-heater [R=301,L]
+RewriteRule ^product/accessories-for-small-pools/debris-cover-for-10ft-and-12ft-pool /product/small-pool-accessories/debris-cover-for-10ft-and-12ft-pool [R=301,L]
+RewriteRule ^product/accessories-for-small-pools/cover-drain /product/small-pool-accessories/cover-drain [R=301,L]
+RewriteRule ^product/accessories-for-small-pools/vinyl-repair-kit /product/small-pool-accessories/vinyl-repair-kit [R=301,L]
+RewriteRule ^product/accessories-for-small-pools/vinyl-repair-patch /product/small-pool-accessories/vinyl-repair-patch [R=301,L]
+RewriteRule ^product/accessories-for-small-pools/floating-dispenser /product/small-pool-accessories/floating-dispenser [R=301,L]
+RewriteRule ^product/pumps/pump-for-intex-pools /product/small-pool-accessories/pump-for-intex-pools [R=301,L]
+RewriteRule ^product/pumps/large-pump-for-intex-pools /product/small-pool-accessories/large-pump-for-intex-pools [R=301,L]
+RewriteRule ^product/filters/mega-pump-and-filter-combo /product/pumps/mega-pump-and-filter-combo [R=301,L]
+RewriteRule ^product/small-pool-accessories/standard-intex-filter-cartridge /product/filters/standard-intex-filter-cartridge [R=301,L]
+RewriteRule ^product/small-pool-accessories/large-intex-filter-cartridge /product/filters/large-intex-filter-cartridge [R=301,L]
+RewriteRule ^product/filters/threaded-hose-tail /product/pipes-and-fittings/threaded-hose-tail [R=301,L]
+RewriteRule ^product/filters/flexible-vacuum-hoses /product/manual-cleaning/flexible-vacuum-hoses [R=301,L]
+RewriteRule ^product/pumps/azur-filter-and-pump-combo /product/filters/azur-pump-and-filter-combo- [R=301,L]
+RewriteRule ^product/automatic-pool-cleaners/tiger-shark-filters /product/filters/tiger-shark-filters [R=301,L]
+RewriteRule ^product/algicides/inground-pool-guide-book /product/chlorines/inground-pool-guide-book [R=301,L]
+RewriteRule ^product/bright-ideas/isopropyl-alcohol-500ml /product/manual-cleaning/isopropyl-alcohol-500ml [R=301,L]
+RewriteRule ^product/ph-balance/inground-pool-guide-book /product/chlorines/inground-pool-guide-book [R=301,L]
+RewriteRule ^product/for-small-pools/3-way-test-strips /product/testing/3-way-test-strips [R=301,L]
+RewriteRule ^product/small-pool-accessories/intex-pump-connection-hose /product/pipes-and-fittings/intex-pump-connection-hose [R=301,L]
+RewriteRule ^airdome.html /content/air-domes-and-enclosures [R=301,L]
+RewriteRule ^product/manual-cleaning/stick-on-tile-band /product/bright-ideas/stick-on-tile-band [R=301,L]
+
+
+
+Redirect 301 /shopscr85.html http://poolstore.co.uk/category/pool-covers
+Redirect 301 /shopscr365.html http://poolstore.co.uk/category/dehumidifiers
+Redirect 301 /shopscr363.html http://poolstore.co.uk/category/pumps
+Redirect 301 /shopscr205.html http://poolstore.co.uk/category/pumps
+Redirect 301 /shopscr508.html http://poolstore.co.uk/advice.html
+Redirect 301 /shopscr2.html http://poolstore.co.uk/category/chemicals
+Redirect 301 /shopscr346.html http://poolstore.co.uk/category/chlorines
+Redirect 301 /shopscr347.html http://poolstore.co.uk/category/algicides
+Redirect 301 /shopscr348.html http://poolstore.co.uk/category/ph-balance
+Redirect 301 /shopscr349.html http://poolstore.co.uk/category/clarifiers
+Redirect 301 /shopscr350.html http://poolstore.co.uk/category/testing
+Redirect 301 /shopscr351.html http://poolstore.co.uk/category/spa
+Redirect 301 /shopscr352.html http://poolstore.co.uk/category/for-small-pools
+Redirect 301 /shopscr353.html http://poolstore.co.uk/category/non-chlorine
+Redirect 301 /shopscr67.html http://poolstore.co.uk/category/cleaning
+Redirect 301 /shopscr354.html http://poolstore.co.uk/category/summer-covers
+Redirect 301 /shopscr355.html http://poolstore.co.uk/category/winter-covers
+Redirect 301 /shopscr356.html http://poolstore.co.uk/category/rollers
+Redirect 301 linerpage.htm http://poolstore.co.uk/pool_liners.html
+Redirect 301 /shopscr3.html http://poolstore.co.uk/category/pool-toys-and-loungers
+Redirect 301 /shopscr357.html http://poolstore.co.uk/category/toys
+Redirect 301 /shopscr358.html http://poolstore.co.uk/category/inflatable-toys
+Redirect 301 /shopscr359.html http://poolstore.co.uk/category/loungers
+Redirect 301 /shopscr137.html http://poolstore.co.uk/category/pool-kits
+Redirect 301 /shopscr360.html http://poolstore.co.uk/category/above-ground-pools
+Redirect 301 /shopscr361.html http://poolstore.co.uk/category/splasher-pools
+Redirect 301 /shopscr205.html http://poolstore.co.uk/category/pool-equipment
+Redirect 301 /shopscr363.html http://poolstore.co.uk/category/pumps
+Redirect 301 /shopscr364.html http://poolstore.co.uk/category/heaters
+Redirect 301 /shopscr406.html http://poolstore.co.uk/category/filters
+Redirect 301 /shopscr378.html http://poolstore.co.uk/category/winter-safety-covers
+Redirect 301 domepage.htm http://poolstore.co.uk/airdome.html
+Redirect 301 /shopscr4.html http://poolstore.co.uk/advice.html
+Redirect 301 /shopscr510.html http://poolstore.co.uk/advice.html
+Redirect 301 /shopscr511.html http://poolstore.co.uk/advice.html
+Redirect 301 /shopscr512.html http://poolstore.co.uk/advice.html
+Redirect 301 /shopscr16.html http://poolstore.co.uk/advice.html
+Redirect 301 /shopscr509.html http://poolstore.co.uk/advice.html
+Redirect 301 /shopscr290.html http://poolstore.co.uk/advice.html
+Redirect 301 /shopscr321.html http://poolstore.co.uk/advice.html
+Redirect 301 /shopscr136.html http://poolstore.co.uk/advice.html
+
+#RewriteEngine On
+
+
+#content pages
+RewriteRule ^(content)/(.*)/?$ index.php?page=content&id=$2 [NC]
+
+#cart page
+RewriteRule ^(shopping-basket)/(delete)/([0-9]+)/(.*)/?$ index.php?page=cart&delete=1&id=$3  [NC,L]
+RewriteRule ^(shopping-basket)/(deleteDiscount)/([0-9]+)/?$ index.php?page=cart&deleteDiscount=1&id=$3  [NC,L]
+RewriteRule ^(shopping-basket)/?$ index.php?page=cart  [NC,L]
+
+#shopping pages
+RewriteRule ^(product)/(.*)\.(.*)/(.*)\.(.*)/?$ index.php?page=product&id=$2&proid=$3 [NC,L]
+RewriteRule ^(product)/(.*)/(.*)/?$ index.php?page=product&id=$2&proid=$3 [NC,L]
+RewriteRule ^(category)/(.*)/?$ index.php?page=category&id=$2 [NC,L]
+
+#billing and shipping page
+RewriteRule ^(billing-delivery)/?$ index.php?page=bs  [NC,L]
+
+#confirm page
+RewriteRule ^(order-confirmation)/?$ index.php?page=confirm  [NC,L]
+
+#cart edit page
+RewriteRule ^(your-cart-edit.html)/?$ index.php?page=cart&edit=1 [NC,L]
+
+#search page
+RewriteRule ^(page=search)(.*)/?$ index.php?page=search&$2  [NC,L]
+
+#for rest of the pages
+RewriteRule ^([a-zA-Z_-]+)\.(html)/?$ index.php?page=$1  [NC,L]
+RewriteRule ^([a-zA-Z_-]+)\.(htm)/?$ index.php?page=$1  [NC,L]
+<Files 403.shtml>
+order allow,deny
+allow from all
+</Files>
+
+deny from 45.64.74.35
+
+# BEGIN cPanel-generated php ini directives, do not edit
+# Manual editing of this file may result in unexpected behavior.
+# To make changes to this file, use the cPanel MultiPHP INI Editor (Home >> Software >> MultiPHP INI Editor)
+# For more information, read our documentation (https://go.cpanel.net/EA4ModifyINI)
+<IfModule php7_module>
+   php_flag display_errors Off
+   php_value max_execution_time 1000
+   php_value max_input_time 600
+   php_value max_input_vars 1000
+   php_value memory_limit 512M
+   php_value post_max_size 128M
+   php_value session.gc_maxlifetime 1440
+   php_value session.save_path "/var/cpanel/php/sessions/ea-php72"
+   php_value upload_max_filesize 128M
+   php_flag zlib.output_compression On
+</IfModule>
+<IfModule lsapi_module>
+   php_flag display_errors Off
+   php_value max_execution_time 1000
+   php_value max_input_time 600
+   php_value max_input_vars 1000
+   php_value memory_limit 512M
+   php_value post_max_size 128M
+   php_value session.gc_maxlifetime 1440
+   php_value session.save_path "/var/cpanel/php/sessions/ea-php72"
+   php_value upload_max_filesize 128M
+   php_flag zlib.output_compression On
+</IfModule>
+# END cPanel-generated php ini directives, do not edit
+

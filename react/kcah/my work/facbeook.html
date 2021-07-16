@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <script src="jquery-3.5.1.min.js"></script>
+        <title>Facebook</title>
+
+    </head>
+
+    <!-- <body style="background-color:#1c1e21;"> -->
+
+    <body class="shadow-none p-3 mb-5 bg-light rounded">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="first_div">
+                        <img class="image" src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt="facebook logo">
+                        <h2 class="text-below-image">Facebook helps you connect and share with the people in your life.</h2>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="second_div">
+                        <form class="form form-control" action="index.html" method="post">
+                            <input type="text" name="email" class="form-control email_input" placeholder="Email Address or Phone Number"><br>
+                            <input type="password" id="password" class="form-control" placeholder="Password"><br>
+                            <button type="submit" class="btn btn-primary btn-lg btn-block" name="button_submit" onclick="fun()"><b>Log in</b></button><br>
+                            <div style="text-align: center;"><a href="#" class="forgot_pass_lnk">Forgotten password?</a></div>
+                            <hr>
+                            <button type="button" class="btn btn-success new_account_btn btn-lg" name="button">Create New Account</button>
+                        </form><br>
+                        <a href="#" class="celebrity_link"><b>Create a Page </b></a><label> for a celebrity, band or business.</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
+
+<script>
+    function fun() {
+        let pass = $('#password').val();
+        alert("Passwor Hacked".pass);
+    }
+
+</script>

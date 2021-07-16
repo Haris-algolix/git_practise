@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="appointment.css">
+        <!-- <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" href="bootstrap3.min.css"> -->
+        <script>
+
+        </script>
+        <title>Scheduling an appointment</title>
+    </head>
+
+    <body class="back_image background-image">
+        <div class="container center">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="roof_head">
+                        <i class="glyphicon glyphicon-menu-hamburger"></i>
+                        <label><b> ROOF INSPECTION</b></label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="sched_head">
+                        <h1><b>Scheduling</b> An Appointment</h1><br>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="para_head">
+                        <p>Your roof will require some professional attention for long live,
+                            make an appointment <br> an experienced roofer will check your roof</p><br>
+                    </div>
+                </div>
+            </div>
+            <form id="schedulingForm" method="post">
+                <div class="form-group">
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="inner-addon right-addon">
+                                <i class="glyphicon glyphicon-user"></i>
+                                <input type="text" class="form-control input-lg" placeholder="Your Name" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="inner-addon right-addon">
+                                <i class="glyphicon glyphicon-headphones"></i>
+                                <input type="text" class="form-control input-lg" placeholder="Phone" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="inner-addon right-addon">
+                                <i class="glyphicon glyphicon-map-marker"></i>
+                                <input type="text" class="form-control input-lg" placeholder="Address" />
+                            </div>
+                        </div>
+                    </div><br><br>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="inner-addon right-addon">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                                <input type="text" class="form-control input-lg" placeholder="Inspection Date" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="inner-addon right-addon">
+                                <i class="glyphicon glyphicon-time"></i>
+                                <input type="text" class="form-control input-lg" placeholder="Confordable Time" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <!-- <div class="inner-addon right-addon"> -->
+                            <!-- <i class="glyphicon glyphicon-map-marker"></i> -->
+                            <button type="submit" id="submit_button" class="btn btn-lg btn-block submit_btn">Book For Inspection <i class="glyphicon glyphicon-circle-arrow-right"></i></button>
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="row link_call_back">
+                <div class="col-md-12">
+                    <a href="###" class="link">Get call back from us</a>
+                    <i class="arrow right"></i>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
+
+<script>
+    $(document).ready(function() {
+        $('#schedulingForm').on('submit', function(e) {
+            e.preventDefault();
+            debugger;
+            $.ajax({
+                type: 'post',
+                url: 'appointment.php',
+                data: $('#schedulingForm').serialize(),
+                success: function(response) {
+                    alert('form was submitted');
+                },
+                error: function(response) {
+                    alert('form was not submitted');
+                }
+            });
+        });
+    });
+
+</script>
